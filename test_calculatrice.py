@@ -41,3 +41,7 @@ def test_soustraction_nombre_romain():
 
 def test_multiplication_nombre_romain():
     assert multiplication_nombre_romain("III", "V") == 15
+
+def test_division_nombre_romain():
+    assert division_nombre_romain("II", "II") == 1
+    assert division_nombre_romain("XV", "III") == 5
