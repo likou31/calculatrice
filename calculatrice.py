@@ -44,4 +44,12 @@ def conversion(chaine):
                 somme += symboleD()
             elif chaine[i] == 'C':
                 somme += symboleC()
+             elif chaine[i] == 'L':
+                somme += 50
+            elif chaine[i] == 'X':
+                somme += 10
+            elif chaine[i] == 'V':
+                somme += 5
+            elif chaine[i] == 'I':
+                somme += 1
     return somme
