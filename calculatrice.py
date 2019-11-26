@@ -21,7 +21,15 @@ def symboleM():
 
 def conversion(chaine):
     somme = 0
-    for i in range(0,len(chaine)):
-        if chaine[i] == 'M':
+    if len(chaine) == 1 :
+        if chaine[0] == 'M':
             somme += symboleM()
+    else:
+        for i in range(0, len(chaine)):
+            if chaine[i] == 'M':
+                somme += symboleM()
+            elif chaine[i] == 'D':
+                somme += symboleD()
+            elif chaine[i] == 'C':
+                somme += symboleC()
     return somme

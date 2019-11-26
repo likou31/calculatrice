@@ -23,3 +23,6 @@ def test_symboleM():
 
 def test_conversion():
     assert conversion("M") == 1000
+    assert conversion("MM") == 2000
+    assert conversion("MD") == 1500
+    assert conversion("MDCC") == 1700
