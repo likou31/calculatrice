@@ -33,5 +33,8 @@ def test_conversion():
 def test_conversion_un_element():
     assert conversion_un_element("M") == 1000
 
-def test_calculatrice():
-    pass
+def test_addition_nombre_romain():
+    assert addition_nombre_romain("III", "MCMXLIV") == 1947
+
+def test_soustraction_nombre_romain():
+    assert soustraction_nombre_romain("MCMXLIV", "III") == 1941

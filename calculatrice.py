@@ -27,8 +27,8 @@ def conversion(chaine):
         if len(chaine) == 2 and chaine[0] < chaine[1]:
             return conversion(chaine[1]) - conversion(chaine[0])
         for indice in range (0,len(chaine) - 1):
-            if chaine[indice] < chaine[indice + 1]:
-                somme -= chaine[indice]
+            if conversion(chaine[indice]) < conversion(chaine[indice + 1]):
+                somme -= conversion(chaine[indice])
             else:
                 somme += conversion(chaine[indice])
         somme += conversion(chaine[-1])
@@ -52,3 +52,9 @@ def conversion_un_element(element):
 
 def soustraction_element(element, element_precedent):
     return element - element_precedent
+
+def addition_nombre_romain(nombre1, nombre2):
+    return conversion(nombre1) + conversion(nombre2)
+
+def soustraction_nombre_romain(nombre1, nombre2):
+    return conversion(nombre1) - conversion(nombre2)
