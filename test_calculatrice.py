@@ -27,3 +27,4 @@ def test_conversion():
     assert conversion("MD") == 1500
     assert conversion("MDCC") == 1700
     assert conversion("IV") == 4
+    assert conversion("MIV") == 1004
