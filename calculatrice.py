@@ -58,3 +58,6 @@ def addition_nombre_romain(nombre1, nombre2):
 
 def soustraction_nombre_romain(nombre1, nombre2):
     return conversion(nombre1) - conversion(nombre2)
+
+def multiplication_nombre_romain(nombre1, nombre2):
+    return conversion(nombre1) * conversion(nombre2)
