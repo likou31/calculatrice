@@ -1,4 +1,7 @@
 from calculatrice import *
 
 def test_conversion():
-    assert conversion("MMVI") == 2006
+    pass
+
+def test_symboleI():
+    assert symboleI() == 1
