@@ -66,4 +66,5 @@ def division_nombre_romain(nombre1, nombre2):
     return conversion(nombre1) / conversion(nombre2)
 
 def calculatrice(signe, nombre1, nombre2):
-    pass
+    if signe == '+':
+        return addition_nombre_romain(nombre1, nombre2)
