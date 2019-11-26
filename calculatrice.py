@@ -68,3 +68,9 @@ def division_nombre_romain(nombre1, nombre2):
 def calculatrice(signe, nombre1, nombre2):
     if signe == '+':
         return addition_nombre_romain(nombre1, nombre2)
+    elif signe == '-':
+        return soustraction_nombre_romain(nombre1, nombre2)
+    elif signe == '*' :
+        return multiplication_nombre_romain(nombre1, nombre2)
+    elif signe == '/':
+        return division_nombre_romain(nombre1, nombre2)

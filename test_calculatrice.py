@@ -50,4 +50,4 @@ def test_calculatrice():
     assert calculatrice('+', "III", "IV") == 7
     assert calculatrice('-', "L", "X") == 40
     assert calculatrice('*', "V", "IV") == 20
-    assert calculatrice('/', "XV", "V") == 2
+    assert calculatrice('/', "XV", "V") == 3
