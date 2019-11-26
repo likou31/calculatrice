@@ -45,3 +45,9 @@ def test_multiplication_nombre_romain():
 def test_division_nombre_romain():
     assert division_nombre_romain("II", "II") == 1
     assert division_nombre_romain("XV", "III") == 5
+
+def test_calculatrice():
+    assert calculatrice('+', "III", "IV") == 7
+    assert calculatrice('-', "L", "X") == 40
+    assert calculatrice('*', "V", "IV") == 20
+    assert calculatrice('/', "XV", "V") == 2

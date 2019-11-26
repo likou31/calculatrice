@@ -64,3 +64,6 @@ def multiplication_nombre_romain(nombre1, nombre2):
 
 def division_nombre_romain(nombre1, nombre2):
     return conversion(nombre1) / conversion(nombre2)
+
+def calculatrice(signe, nombre1, nombre2):
+    pass
