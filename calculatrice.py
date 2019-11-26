@@ -23,20 +23,22 @@ def conversion(chaine):
     somme = 0
     if len(chaine) == 1 :
         if chaine[0] == 'M':
-            somme += symboleM()
+            return symboleM()
         elif chaine[0] == 'D':
-            somme += 500
+            return symboleD()
         elif chaine[0] == 'C':
-            somme += 100
+            return symboleC()
         elif chaine[0] == 'L':
-            somme += 50
+            return symboleL()
         elif chaine[0] == 'X':
-            somme += 10
+            return symboleX()
         elif chaine[0] == 'V':
-            somme += 5
+            return symboleV()
         elif chaine[0] == 'I':
-            somme += 1
+            return symboleI()
     else:
+        if len(chaine) == 2 and chaine[0] < chaine[1]:
+            return conversion(chaine[1]) - conversion(chaine[0])
         for i in range(0, len(chaine)):
             if chaine[i] == 'M':
                 somme += symboleM()
@@ -44,7 +46,7 @@ def conversion(chaine):
                 somme += symboleD()
             elif chaine[i] == 'C':
                 somme += symboleC()
-             elif chaine[i] == 'L':
+            elif chaine[i] == 'L':
                 somme += 50
             elif chaine[i] == 'X':
                 somme += 10
