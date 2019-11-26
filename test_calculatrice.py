@@ -38,3 +38,6 @@ def test_addition_nombre_romain():
 
 def test_soustraction_nombre_romain():
     assert soustraction_nombre_romain("MCMXLIV", "III") == 1941
+
+def test_multiplication_nombre_romain():
+    assert multiplication_nombre_romain("III", "V") == 15
