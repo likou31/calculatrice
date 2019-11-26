@@ -28,3 +28,10 @@ def test_conversion():
     assert conversion("MDCC") == 1700
     assert conversion("IV") == 4
     assert conversion("MIV") == 1004
+    assert conversion("MCMXLIV") == 1944
+
+def test_conversion_un_element():
+    assert conversion_un_element("M") == 1000
+
+def test_calculatrice():
+    pass

@@ -26,8 +26,12 @@ def conversion(chaine):
     else:
         if len(chaine) == 2 and chaine[0] < chaine[1]:
             return conversion(chaine[1]) - conversion(chaine[0])
-        for i in chaine:
-            somme += conversion(i)
+        for indice in range (0,len(chaine) - 1):
+            if chaine[indice] < chaine[indice + 1]:
+                somme -= chaine[indice]
+            else:
+                somme += conversion(chaine[indice])
+        somme += conversion(chaine[-1])
     return somme
 
 def conversion_un_element(element):
@@ -45,3 +49,6 @@ def conversion_un_element(element):
         return symboleV()
     elif element == 'I':
         return symboleI()
+
+def soustraction_element(element, element_precedent):
+    return element - element_precedent
