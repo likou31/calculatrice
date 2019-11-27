@@ -94,5 +94,12 @@ def test_conversion_dizaine_francais_romain():
 
 
 def test_conversion_francais_romain():
+    assert conversion_francais_romain(3) == 'III'
     assert conversion_francais_romain(1003) == "MIII"
     assert conversion_francais_romain(154) == "CLIV"
+
+def test_calculatrice_romaine():
+    assert calculatrice('+', "III", "IV") == "VII"
+    assert calculatrice('-', "L", "X") == "XL"
+    assert calculatrice('*', "V", "IV") == "XX"
+    assert calculatrice('/', "XV", "V") == "III"

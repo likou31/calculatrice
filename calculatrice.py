@@ -77,87 +77,99 @@ def calculatrice(signe, nombre1, nombre2):
 
 def conversion_un_element_francais_romain(nombre):
     if nombre == 1 :
-        return "I"
+        return 'I'
     if nombre == 5:
-        return "V"
+        return 'V'
     if nombre == 10 :
-        return "X"
+        return 'X'
     if nombre == 50 :
-        return "L"
+        return 'L'
     if nombre == 100 :
-        return "C"
+        return 'C'
     if nombre == 500 :
-        return "D"
+        return 'D'
     if nombre == 1000 :
-        return "M"
+        return 'M'
 
 def conversion_chiffre_francais_romain(nombre):
     if nombre == 1 :
-        return "I"
+        return 'I'
     elif nombre == 2:
-        return "II"
+        return 'II'
     elif nombre == 3 :
-        return "III"
+        return 'III'
     elif nombre == 4:
-        return "IV"
+        return 'IV'
     elif nombre == 5 :
-        return "V"
+        return 'V'
     elif nombre == 6:
-        return "VI"
+        return 'VI'
     elif nombre == 7 :
-        return "VII"
+        return 'VII'
     elif nombre == 8:
-        return "VIII"
+        return 'VIII'
     elif nombre == 9 :
-        return "IX"
+        return 'IX'
 
 def conversion_dizaine_francais_romain(nombre):
     if nombre == 10 :
-        return "X"
+        return 'X'
     elif nombre == 20 :
-        return "XX"
+        return 'XX'
     elif nombre == 30 :
-        return "XXX"
+        return 'XXX'
     elif nombre == 40 :
-        return "XL"
+        return 'XL'
     elif nombre == 50 :
-        return "L"
+        return 'L'
     elif nombre == 60 :
-        return "LX"
+        return 'LX'
     elif nombre == 70 :
-        return "LXX"
+        return 'LXX'
     elif nombre == 80 :
-        return "LXXX"
+        return 'LXXX'
     elif nombre == 90 :
-        return "XC"
+        return 'XC'
 
 def conversion_centaine_francais_romain(nombre):
     if nombre == 100 :
-        return "C"
+        return 'C'
     elif nombre == 200 :
-        return "CC"
+        return 'CC'
     elif nombre == 300 :
-        return "CCC"
+        return 'CCC'
     elif nombre == 400 :
-        return "CD"
+        return 'CD'
     elif nombre == 500 :
-        return "D"
+        return 'D'
     elif nombre == 600 :
-        return "DC"
+        return 'DC'
     elif nombre == 700 :
-        return "DCC"
+        return 'DCC'
     elif nombre == 800 :
-        return "DCCC"
+        return 'DCCC'
     elif nombre == 900 :
-        return "CM"
+        return 'CM'
 
 def conversion_francais_romain(nombre):
-    resultat = ""
+    resultat = ''
     nb = 0
+    i = 1
     while nombre != 0 :
-        break
-    return 0
+        nb = nombre % 10
+        resultat = str(conversion_un_nombre(nb, i)) + resultat
+        i *= 10
+        nombre //= 10
+    return resultat
 
-            
-        
-
+def conversion_un_nombre(nombre, i):
+    if nombre == 0 :
+        return ''
+    if nombre * i < 10 :
+        return conversion_chiffre_francais_romain(nombre * i)
+    elif nombre * i < 100 :
+        return conversion_dizaine_francais_romain(nombre * i)
+    elif nombre * i < 1000 :
+        return conversion_centaine_francais_romain(nombre * i)
+    else :
+        return conversion_un_element_francais_romain(nombre * i)
