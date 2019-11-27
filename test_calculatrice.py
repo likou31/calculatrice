@@ -76,3 +76,8 @@ def mocked_multiplication_nombre_romain(nombre1, nombre2):
 
 def mocked_division_nombre_romain(nombre1, nombre2):
     return conversion(nombre1) / conversion(nombre2) - 1
+
+def test_conversion_un_element_francais_romain():
+    assert conversion_un_element_francais_romain(1) == "I"
+    assert conversion_un_element_francais_romain(10) == "X"
+    assert conversion_un_element_francais_romain(1000) == "M"
