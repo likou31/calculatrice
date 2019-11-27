@@ -99,7 +99,7 @@ def test_conversion_francais_romain():
     assert conversion_francais_romain(154) == "CLIV"
 
 def test_calculatrice_romaine():
-    assert calculatrice('+', "III", "IV") == "VII"
-    assert calculatrice('-', "L", "X") == "XL"
-    assert calculatrice('*', "V", "IV") == "XX"
-    assert calculatrice('/', "XV", "V") == "III"
+    assert calculatrice_romaine('+', "III", "IV") == "VII"
+    assert calculatrice_romaine('-', "L", "X") == "XL"
+    assert calculatrice_romaine('*', "V", "IV") == "XX"
+    assert calculatrice_romaine('/', "XV", "V") == "III"

@@ -173,3 +173,6 @@ def conversion_un_nombre(nombre, i):
         return conversion_centaine_francais_romain(nombre * i)
     else :
         return conversion_un_element_francais_romain(nombre * i)
+
+def calculatrice_romaine(signe, nombre1, nombre2):
+    return conversion_francais_romain(calculatrice(signe, nombre1, nombre2))
