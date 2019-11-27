@@ -81,3 +81,18 @@ def test_conversion_un_element_francais_romain():
     assert conversion_un_element_francais_romain(1) == "I"
     assert conversion_un_element_francais_romain(10) == "X"
     assert conversion_un_element_francais_romain(1000) == "M"
+
+def test_conversion_chiffre_francais_romain():
+    assert conversion_chiffre_francais_romain(9) == "IX"
+    assert conversion_chiffre_francais_romain(4) == "IV"
+    assert conversion_chiffre_francais_romain(7) == "VII"
+
+def test_conversion_dizaine_francais_romain():
+    assert conversion_dizaine_francais_romain(20) == "XX"
+    assert conversion_dizaine_francais_romain(90) == "XC"
+    assert conversion_dizaine_francais_romain(40) == "XL"
+
+
+def test_conversion_francais_romain():
+    assert conversion_francais_romain(1003) == "MIII"
+    assert conversion_francais_romain(154) == "CLIV"
