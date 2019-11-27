@@ -1,4 +1,5 @@
 from calculatrice import *
+import calculatrice as calculatrice
 
 def test_symboleI():
     assert symboleI() == 1
@@ -51,3 +52,17 @@ def test_calculatrice():
     assert calculatrice('-', "L", "X") == 40
     assert calculatrice('*', "V", "IV") == 20
     assert calculatrice('/', "XV", "V") == 3
+
+def test_calculatrice(monkeypatch):
+    monkeypatch.setattr(calculatrice, 'addition_nombre_romain', mocked_addition_nombre_romain)
+    assert calculatrice.calculatrice('+', "III", "IV") == 10
+    monkeypatch.setattr(calculatrice, 'soustraction_nombre_romain', mocked_soustraction_nombre_romain)
+    assert calculatrice.calculatrice('-', "L", "X") == 36
+
+
+
+def mocked_addition_nombre_romain(nombre1, nombre2):
+    return conversion(nombre1) + conversion(nombre2) + 3
+
+def mocked_soustraction_nombre_romain(nombre1, nombre2):
+    return conversion(nombre1) - conversion(nombre2) - 4
