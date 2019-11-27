@@ -76,3 +76,30 @@ def mocked_multiplication_nombre_romain(nombre1, nombre2):
 
 def mocked_division_nombre_romain(nombre1, nombre2):
     return conversion(nombre1) / conversion(nombre2) - 1
+
+def test_conversion_un_element_francais_romain():
+    assert conversion_un_element_francais_romain(1) == "I"
+    assert conversion_un_element_francais_romain(10) == "X"
+    assert conversion_un_element_francais_romain(1000) == "M"
+
+def test_conversion_chiffre_francais_romain():
+    assert conversion_chiffre_francais_romain(9) == "IX"
+    assert conversion_chiffre_francais_romain(4) == "IV"
+    assert conversion_chiffre_francais_romain(7) == "VII"
+
+def test_conversion_dizaine_francais_romain():
+    assert conversion_dizaine_francais_romain(20) == "XX"
+    assert conversion_dizaine_francais_romain(90) == "XC"
+    assert conversion_dizaine_francais_romain(40) == "XL"
+
+
+def test_conversion_francais_romain():
+    assert conversion_francais_romain(3) == 'III'
+    assert conversion_francais_romain(1003) == "MIII"
+    assert conversion_francais_romain(154) == "CLIV"
+
+def test_calculatrice_romaine():
+    assert calculatrice_romaine('+', "III", "IV") == "VII"
+    assert calculatrice_romaine('-', "L", "X") == "XL"
+    assert calculatrice_romaine('*', "V", "IV") == "XX"
+    assert calculatrice_romaine('/', "XV", "V") == "III"
