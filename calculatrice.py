@@ -176,3 +176,32 @@ def conversion_un_nombre(nombre, i):
 
 def calculatrice_romaine(signe, nombre1, nombre2):
     return conversion_francais_romain(calculatrice(signe, nombre1, nombre2))
+
+def main():
+    nombre1 = 0
+    nombre2 = 0
+    signe = ''
+    resultat = ''
+    fin = 1
+    print("")
+    print("")
+    print("    BIENVENUE SUR LA CALCULATRICE ROMAINE    ")
+    print("_____________________________________________")
+    while fin != 0 :
+        print("")
+        nombre1 = input("Votre premier nombre romain : ")
+        print("")
+        nombre2 = input("Votre deuxieme nombre romain : ")
+        print("")
+        signe = input("Le caractère de votre calcul : ")
+        print("")
+        resultat = calculatrice_romaine(signe, nombre1, nombre2)
+        print("Votre resultat : ", resultat)
+        print("")
+        print("")
+        fin = int(input("Voulez-vous recommencer (1 pour oui, 0 pour non) ? "))
+    return 0
+
+    
+
+main()
